@@ -3,14 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { AlignJustify, X } from 'lucide-react';
-import { ButtonOne } from './ButtonOne';
 
 export default function MobileMenu() {
-  // const [isOpen, setIsOpen] = React.useState(false);
-  // const toggleDrawer = () => {
-  //   setIsOpen((prevState) => !prevState);
-  // };
-
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
   const trigger = useRef<HTMLButtonElement>(null);
@@ -54,11 +48,6 @@ export default function MobileMenu() {
     return () => document.removeEventListener('keydown', keyHandler);
   });
 
-  // const bothToggle = () => {
-  //   setMobileNavOpen(false);
-  //   setIsOpen((prevState) => !prevState);
-  // };
-
   return (
     <div className='lg:hidden flex flex-col items-center'>
       {/* Hamburger button */}
@@ -98,17 +87,6 @@ export default function MobileMenu() {
               </a>
             </li>
           ))}
-
-          {/* <li>
-          <Link href='/contact'>
-            <button
-              className='bg-[#000] py-2 px-6 text-[#fff] rounded primary_button hover:duration-300 font-semibold'
-              onClick={() => setMobileNavOpen(false)}
-            >
-              Contact Now
-            </button>
-            </Link>
-          </li> */}
         </ul>
       </nav>
     </div>
