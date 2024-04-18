@@ -13,14 +13,11 @@ const inter = Inter({ subsets: ['latin'] });
 
 const space = Space_Grotesk({ subsets: ['latin'] });
 
-import Logo from '@/public/selbekk-studio.png';
-// const imageURL = `https://www.selbekk.studio/${Logo}`;
-const imageURL = `https://www.selbekk.studio/Selbekk-Studio-og.png`;
+const imageURL = `https://http://www.returdbranzen.com/og.png`;
 
 export const metadata: Metadata = {
-  title: 'Selbekk Studio',
-  description:
-    'We design & build websites that drive results and help your Business grow. No BS. Just Results.',
+  title: 'Returd Branzen',
+  description: 'I am Returd Branzen. I am here to find moon',
   openGraph: {
     images: imageURL,
   },
@@ -31,11 +28,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const CrispWithNoSSR = dynamic(() => import('../components/crisp'));
-
   return (
     <html lang='en' className='!scroll-smooth'>
-      <CrispWithNoSSR />
       <body className={space.className}>
         <Header />
         {children}

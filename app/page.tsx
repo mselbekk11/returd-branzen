@@ -14,48 +14,20 @@ import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
 import ContactForm from '../components/ContactForm';
 
-// import Head from 'next/head';
-// import Logo from '@/public/selbekk-studio.png';
 
 export default function Home() {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const toggleDrawer = () => {
-    setIsOpen((prevState) => !prevState);
-  };
 
   return (
     <>
-      {/* <Head>
-        <meta property='og:title' content='Selbekk Studio' />
-        <meta
-          property='og:description'
-          content='We design & build websites that drive results and help your Business grow. No BS. Just Results.'
-        />
-        <meta
-          property='og:image'
-          content={`https://www.selbekk.studio/${Logo}`}
-        />
-      </Head> */}
-
-      <main className='min-h-screen'>
+      <main className=''>
         <Hero />
-        <InfiniteMovingCardsDemo />
+        {/* <InfiniteMovingCardsDemo />
         <Services />
         <Projects />
         <Steps />
         <Testimonials />
         <Faq />
-        <Book />
-        {/* <Drawer
-          open={isOpen}
-          size='40vw'
-          lockBackgroundScroll={true}
-          onClose={toggleDrawer}
-          direction='right'
-          className='hidden lg:block'
-        >
-          <ContactForm />
-        </Drawer> */}
+        <Book /> */}
       </main>
     </>
   );

@@ -22,6 +22,12 @@ export default function MobileMenu() {
     { name: 'FAQ', href: '/#faq' },
   ];
 
+  const buttons = [
+    { name: 'TWITTER / X', href: '/#services' },
+    { name: 'TELEGRAM', href: '/#showcase' },
+    { name: 'BUY', href: '/#faq' },
+  ];
+
   // close the mobile menu on click outside
   useEffect(() => {
     const clickHandler = ({ target }: { target: EventTarget | null }): void => {
@@ -65,9 +71,9 @@ export default function MobileMenu() {
       >
         <span className='sr-only'>Menu</span>
         {mobileNavOpen ? (
-          <X className='w-8 h-8 fill-current text-black' />
+          <X className='w-8 h-8 fill-current text-white' />
         ) : (
-          <AlignJustify className='w-8 h-8 fill-current text-black' />
+          <AlignJustify className='w-8 h-8 fill-current text-white' />
         )}
       </button>
 
@@ -75,28 +81,25 @@ export default function MobileMenu() {
       <nav
         id='mobile-nav'
         ref={mobileNav}
-        className='absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out mt-4'
+        className='absolute top-full z-20 left-0 w-full sm:px-6 overflow-hidden transition-all duration-300 ease-in-out mt-4'
         style={
           mobileNavOpen
             ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 }
             : { maxHeight: 0, opacity: 0.8 }
         }
       >
-        <ul className='bg-white px-6 py-6 border-2 border-gray-200 flex flex-col items-center'>
-          {navigation.map((item) => (
+        <ul className='bg-black px-6 py-6 border-4 border-white flex flex-col items-center'>
+          {buttons.map((item) => (
             <li key={item.name} className='pb-6'>
-              <Link
-                key={item.name}
-                href={item.href}
-                className='text-base font-semibold text-gray-600'
-                onClick={() => setMobileNavOpen(false)}
-              >
-                {item.name}
-              </Link>
+              <a href={item.href}>
+                <button className='text-base font-semibold hover:text-[#FF9EEA] border-2 border-[#FF9EEA] text-white py-4 px-6 ml-2 min-w-[200px]'>
+                  {item.name}
+                </button>
+              </a>
             </li>
           ))}
 
-          <li>
+          {/* <li>
           <Link href='/contact'>
             <button
               className='bg-[#000] py-2 px-6 text-[#fff] rounded primary_button hover:duration-300 font-semibold'
@@ -105,7 +108,7 @@ export default function MobileMenu() {
               Contact Now
             </button>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
