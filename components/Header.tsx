@@ -9,6 +9,7 @@ export function Header() {
   const buttons = [
     { name: 'TWITTER / X', href: '/#services' },
     { name: 'TELEGRAM', href: '/#showcase' },
+    { name: 'DEX', href: '/' },
     { name: 'BUY', href: '/#faq' },
   ];
 

@@ -10,16 +10,11 @@ export default function MobileMenu() {
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
 
-  const navigation = [
-    { name: 'Services', href: '/#services' },
-    { name: 'Work', href: '/#showcase' },
-    { name: 'FAQ', href: '/#faq' },
-  ];
-
   const buttons = [
-    { name: 'TWITTER / X', href: '/#services' },
-    { name: 'TELEGRAM', href: '/#showcase' },
-    { name: 'BUY', href: '/#faq' },
+    { name: 'TWITTER / X', href: '/#' },
+    { name: 'TELEGRAM', href: '/' },
+    { name: 'DEX', href: '/' },
+    { name: 'BUY', href: '/' },
   ];
 
   // close the mobile menu on click outside
