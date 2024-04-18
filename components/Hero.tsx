@@ -10,10 +10,10 @@ export default function Hero() {
         <div className='w-full'>
           <VideoOne />
         </div>
-        <div className='w-full bg-[#FF9EEA] mt-12 px-4 py-6 border-[#fff] border-4 semi-bold'>
-          <p className='text-sm md:text-2xl lg:text-4xl font-semibold'>
-            CA: Daj7rboZr4sfuvTNbXgDfpfQFwK8k1fgzCFGBU6uN66e
-          </p>
+        <div className='w-full bg-[#FF9EEA] mt-12 px-4 py-6 border-[#fff] border-4 text-sm md:text-2xl lg:text-4xl font-semibold text-wrap'>
+          CA: Daj7rboZr4sfuvTNbXg
+          <br className='md:hidden' />
+          DfpfQFwK8k1fgzCFGBU6uN66e
         </div>
         <div className='mt-10 lg:mt-20'>
           <Image
