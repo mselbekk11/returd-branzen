@@ -7,10 +7,10 @@ import MobileMenu from './MobileMenu';
 
 export function Header() {
   const buttons = [
-    { name: 'TWITTER / X', href: '/#services' },
-    { name: 'TELEGRAM', href: '/#showcase' },
+    { name: 'TWITTER / X', href: 'https://x.com/returdbranzen' },
+    { name: 'TELEGRAM', href: 'https://t.me/returdbranzen' },
     { name: 'DEX', href: '/' },
-    { name: 'BUY', href: '/#faq' },
+    { name: 'BUY', href: '/' },
   ];
 
   return (
@@ -41,7 +41,7 @@ export function Header() {
           <a href=''></a>
           {buttons.map((item) => (
             <div key={item.name}>
-              <a href={item.href}>
+              <a href={item.href} target='_blank'>
                 <button className='text-base font-semibold hover:text-[#FF9EEA] border-2 border-[#FF9EEA] text-white py-4 px-6 ml-2'>
                   {item.name}
                 </button>

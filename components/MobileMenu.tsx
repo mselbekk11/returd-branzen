@@ -11,8 +11,8 @@ export default function MobileMenu() {
   const mobileNav = useRef<HTMLDivElement>(null);
 
   const buttons = [
-    { name: 'TWITTER / X', href: '/#' },
-    { name: 'TELEGRAM', href: '/' },
+    { name: 'TWITTER / X', href: 'https://x.com/returdbranzen' },
+    { name: 'TELEGRAM', href: 'https://t.me/returdbranzen' },
     { name: 'DEX', href: '/' },
     { name: 'BUY', href: '/' },
   ];
@@ -75,7 +75,7 @@ export default function MobileMenu() {
         <ul className='bg-black px-6 py-6 border-4 border-white flex flex-col items-center'>
           {buttons.map((item) => (
             <li key={item.name} className='pb-6'>
-              <a href={item.href}>
+              <a href={item.href} target='_blank'>
                 <button className='text-base font-semibold hover:text-[#FF9EEA] border-2 border-[#FF9EEA] text-white py-4 px-6 ml-2 min-w-[200px]'>
                   {item.name}
                 </button>
