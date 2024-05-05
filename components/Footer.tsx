@@ -14,15 +14,16 @@ export function Footer() {
       <p className='text-gray-500 pb-2 text-xs lg:text-base'>
         Copyright © 2024 Returd Branzen. All rights reserved.
       </p>
-      {/* <div className='text-gray-500 text-xs lg:text-base'>
-        <Link href='/terms-and-conditions' className='hover:underline'>
-          Terms & Conditions
-        </Link>{' '}
-        |{' '}
-        <Link href='/privacy-policy' className='hover:underline'>
-          Privacy Policy
-        </Link>
-      </div> */}
+      <p className='text-white pb-2 text-xs lg:text-base'>
+        Site by{' '}
+        <a
+          href='https://www.meme-coin.io/'
+          className='underline'
+          target='_blank'
+        >
+          meme-coin.io
+        </a>
+      </p>
     </div>
   );
 }
